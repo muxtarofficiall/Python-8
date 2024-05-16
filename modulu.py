@@ -1,18 +1,23 @@
+from packets.modul import samitler  
+
 def samitler(cumle):
-    list=["A","I","O","U","E"]
-    newlist=[]
+    vowels = ["A", "I", "O", "U", "E"]
+    newlist = []
+    
     for i in cumle: 
-        a=False
-        for j in list:
-            if i.upper()==j.upper():
-                a=True
+        is_vowel = False
+        for j in vowels:
+            if i.upper() == j:
+                is_vowel = True
                 break
-        if a==False:
-            if i in newlist:
-                pass
-            elif i==" ":
-                pass
-            else:
+        if not is_vowel:
+            if i not in newlist and i != " ":
                 newlist.append(i)
     
     return newlist
+
+
+a = input("Bir cümle girin: ")
+yeni = samitler(a)
+
+print(yeni)
