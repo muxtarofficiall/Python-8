@@ -1,4 +1,4 @@
-from packets.modul import samitler  
+
 
 def samitler(cumle):
     vowels = ["A", "I", "O", "U", "E"]
